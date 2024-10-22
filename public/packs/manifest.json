@@ -1,0 +1,4 @@
+{
+  "application.js": "/packs/js/application-<hash>.js",
+  "application.js.map": "/packs/js/application-<hash>.js.map"
+}

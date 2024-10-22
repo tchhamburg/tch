@@ -1,0 +1,15 @@
+<div class="slideshow-container">
+  <% slides = ['slide1.jpeg', 'slide2.jpeg', 'slide3.jpeg'] %>
+
+  <% slides.each_with_index do |slide, index| %>
+    <div class="slide <%= 'active' if index == 0 %>">
+      <% if asset_exists?(slide) %>
+        <%= image_tag slide, alt: "Slide #{index + 1}", class: "slide-image" %>
+      <% else %>
+        <div class="error-message">
+          Image <%= slide %> not found in assets
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>

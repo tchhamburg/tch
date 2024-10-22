@@ -1,0 +1,57 @@
+<!-- app/views/layouts/application.html.erb -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Telugu Community Hamburg</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+<header>
+  <div class="logo">
+    <%= image_tag "logo.jpeg", size: "150x150" rescue nil %>
+  </div>
+  </div>
+  <h1 class="title">Telugu Community Hamburg</h1>
+</header>
+
+<nav>
+  <ul>
+    <li><%= link_to 'Home', root_path %></li>
+    <li><%= link_to 'Membership', membership_path %></li>
+    <li><%= link_to 'Gallery', gallery_path %></li>
+    <li><%= link_to 'Events', events_path %></li>
+    <li><%= link_to 'About Us', about_path %></li>
+    <li><%= link_to 'Contact', contact_path %></li>
+    <li><%= link_to 'Registration', registration_path %></li>
+  </ul>
+</nav>
+
+<main>
+  <%= yield %>
+</main>
+
+<footer>
+  <div class="footer-links">
+  <span>
+    <i class="fas fa-envelope"></i>
+    <a href="telugucommunityhamburglive@gmail.com">telugucommunityhamburglive@gmail.com</a>
+  </span>
+    <span> <i class="fas fa-map-marker-alt"></i>
+    Redderkopell 14A, Hamburg 22399
+  </span>
+      <span>
+    <i class="fas fa-phone-alt"></i>
+    <a href="tel:+4917659943022">+49 176 59943022</a>
+  </span>
+    </div>
+    <%= link_to 'About Us', about_path %>
+    <%= link_to 'Contact', contact_path %>
+  </div>
+</footer>
+</body>
+</html>
